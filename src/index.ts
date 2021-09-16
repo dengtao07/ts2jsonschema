@@ -34,7 +34,7 @@ fs.writeFileSync(path.join(__dirname, "./json-schema", "schema.json"), newSchema
 /* use jsonschema to validate responses from server */
 const apiSchema = require('./json-schema/schema.json')
 const v = new Validator();
-v.addSchema(apiSchema, schemaId);
+v.addSchema(apiSchema as any, schemaId);
 
 Api1().then(res => { 
   const validateRes1 = v.validate(res, { $ref: `api#/definitions/IApi1` })
@@ -44,9 +44,3 @@ Api2().then(res => {
   const validateRes2 = v.validate(res, { $ref: `api#/definitions/IApi2` })
   console.log(validateRes2);
 });
-
-
-
-
-
-
