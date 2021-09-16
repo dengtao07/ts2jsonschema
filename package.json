@@ -9,12 +9,17 @@
     "transfer": "node scripts/transfer.js",
     "prepare": "husky install"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "*": "node scripts/transfer.js"
+  },
   "devDependencies": {
     "@types/node": "^16.7.13",
     "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2",
