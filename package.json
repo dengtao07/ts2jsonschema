@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "*": "node scripts/transfer.js"
+    "src/apis/index.ts": "node scripts/transfer.js"
   },
   "devDependencies": {
     "@types/node": "^16.7.13",
